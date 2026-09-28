@@ -1,0 +1,305 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+
+
+/* style for nav bar */
+* {
+    box-sizing: border-box;
+}
+
+
+
+/* =========================
+   NAVBAR
+   ========================= */
+
+.navbar {
+    height: 88px;
+
+    display: flex;
+    align-items: center;
+
+    padding: 0 50px;
+
+    background: linear-gradient(90deg, #4b45e5, #8338ec);
+
+    color: white;
+
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+
+    position: relative;
+
+    z-index: 1000;
+}
+
+
+/* =========================
+   HAMBURGER BUTTON
+   ========================= */
+
+.menu-btn {
+    width: 45px;
+    height: 45px;
+
+    margin-right: 18px;
+
+    background: transparent;
+
+    border: none;
+
+    color: white;
+
+    font-size: 30px;
+
+    cursor: pointer;
+
+    border-radius: 6px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.menu-btn:hover {
+    background: rgba(255, 255, 255, 0.15);
+}
+
+
+/* =========================
+   NAVBAR TITLE
+   ========================= */
+
+.navbar h1 {
+    margin: 0;
+
+    font-size: 30px;
+
+    font-weight: 700;
+}
+
+
+/* =========================
+   RIGHT SIDE
+   ========================= */
+
+.right {
+    margin-left: auto;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 20px;
+
+    font-size: 16px;
+}
+
+
+.right a {
+    color: white;
+
+    text-decoration: none;
+
+    background: rgba(255, 255, 255, 0.18);
+
+    padding: 10px 22px;
+
+    border-radius: 25px;
+}
+
+.right a:hover {
+    background: rgba(255, 255, 255, 0.30);
+}
+
+
+/* =========================
+   SIDEBAR
+   ========================= */
+
+.sidebar {
+    position: fixed;
+
+    top: 88px;
+
+    left: -280px;
+
+    width: 280px;
+
+    height: calc(100vh - 88px);
+
+    background: white;
+
+    box-shadow: 4px 0 12px rgba(0, 0, 0, 0.15);
+
+    transition: left 0.3s ease;
+
+    z-index: 999;
+
+    overflow-y: auto;
+}
+
+
+/* Sidebar OPEN */
+
+.sidebar.active {
+    left: 0;
+}
+
+
+/* =========================
+   SIDEBAR TITLE
+   ========================= */
+
+.sidebar h2 {
+    margin: 0;
+
+    padding: 25px 20px;
+
+    color: #4b45e5;
+
+    font-size: 21px;
+
+    border-bottom: 1px solid #eee;
+}
+
+
+/* =========================
+   SIDEBAR LINKS
+   ========================= */
+
+.sidebar a {
+    display: block;
+
+    padding: 16px 22px;
+
+    color: #333;
+
+    text-decoration: none;
+
+    font-size: 16px;
+
+    border-bottom: 1px solid #f1f1f1;
+
+    transition: 0.2s;
+}
+
+
+.sidebar a:hover {
+    background: #f0efff;
+
+    color: #4b45e5;
+
+    padding-left: 28px;
+}
+
+
+/* =========================
+   MAIN CONTENT
+   ========================= */
+
+.main-content {
+    padding: 40px;
+}
+
+
+
+
+
+
+
+body {
+    font-family: 'Segoe UI', Tahoma, sans-serif;
+    background: #f1f5f9;
+    color: #1e293b;
+}
+
+/* ---------- LOGIN / REGISTER ---------- */
+.auth-body {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #4f46e5, #7c3aed, #ec4899);
+}
+.auth-card {
+    background: #fff;
+    width: 380px;
+    padding: 40px 35px;
+    border-radius: 16px;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.25);
+}
+.auth-card h2 { text-align: center; color: #4f46e5; margin-bottom: 6px; font-size: 26px; }
+.auth-card .subtitle { text-align: center; color: #64748b; margin-bottom: 25px; font-size: 14px; }
+.auth-card label { display: block; font-size: 13px; font-weight: 600; margin: 14px 0 6px; }
+.auth-card input {
+    width: 100%; padding: 11px 14px;
+    border: 1.5px solid #cbd5e1; border-radius: 8px;
+    font-size: 14px; outline: none; transition: 0.2s;
+}
+.auth-card input:focus { border-color: #4f46e5; box-shadow: 0 0 0 3px rgba(79,70,229,0.15); }
+.btn {
+    width: 100%; margin-top: 22px; padding: 12px;
+    border: none; border-radius: 8px; cursor: pointer;
+    background: linear-gradient(90deg, #4f46e5, #7c3aed);
+    color: #fff; font-size: 15px; font-weight: 600; transition: 0.2s;
+}
+.btn:hover { transform: translateY(-2px); box-shadow: 0 8px 20px rgba(79,70,229,0.4); }
+.auth-link { text-align: center; margin-top: 18px; font-size: 14px; }
+.auth-link a { color: #4f46e5; font-weight: 600; text-decoration: none; }
+.msg { padding: 10px 14px; border-radius: 8px; font-size: 14px; margin-bottom: 10px; }
+.msg.error   { background: #fee2e2; color: #b91c1c; }
+.msg.success { background: #dcfce7; color: #15803d; }
+
+/* ---------- DASHBOARD ---------- */
+.navbar {
+    background: linear-gradient(90deg, #4f46e5, #7c3aed);
+    color: #fff; padding: 16px 40px;
+    display: flex; justify-content: space-between; align-items: center;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+.navbar h1 { font-size: 22px; }
+.navbar .right { display: flex; align-items: center; gap: 18px; font-size: 14px; }
+.navbar a {
+    color: #fff; text-decoration: none; background: rgba(255,255,255,0.2);
+    padding: 7px 16px; border-radius: 20px; transition: 0.2s;
+}
+.navbar a:hover { background: rgba(255,255,255,0.35); }
+
+.container { max-width: 1100px; margin: 30px auto; padding: 0 20px; }
+
+.filter-bar {
+    background: #fff; padding: 20px 25px; border-radius: 12px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+    margin-bottom: 25px;
+}
+.filter-bar form { display: flex; flex-wrap: wrap; align-items: center; gap: 12px; }
+.filter-bar label { font-weight: 600; }
+.filter-bar select, .filter-bar input[type=text], .filter-bar input[type=date] {
+    padding: 9px 12px; border: 1.5px solid #cbd5e1; border-radius: 8px; font-size: 14px;
+}
+.filter-bar input[type=submit] {
+    background: #4f46e5; color: #fff; border: none;
+    padding: 10px 22px; border-radius: 8px; cursor: pointer; font-weight: 600;
+}
+.filter-bar input[type=submit]:hover { background: #4338ca; }
+.filter-bar .reset { color: #64748b; text-decoration: none; font-size: 14px; }
+
+.table-card {
+    background: #fff; border-radius: 12px; overflow: hidden;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+}
+table { width: 100%; border-collapse: collapse; }
+thead { background: #eef2ff; }
+th { text-align: left; padding: 14px 18px; font-size: 13px; text-transform: uppercase; color: #4f46e5; letter-spacing: 0.5px; }
+td { padding: 14px 18px; border-top: 1px solid #f1f5f9; font-size: 14px; }
+tbody tr:hover { background: #f8fafc; }
+.empty { text-align: center; padding: 30px; color: #94a3b8; }
+
+.badge { padding: 4px 12px; border-radius: 20px; font-size: 12px; font-weight: 600; }
+.b-green  { background: #dcfce7; color: #15803d; }
+.b-blue   { background: #dbeafe; color: #1d4ed8; }
+.b-red    { background: #fee2e2; color: #b91c1c; }
+.b-orange { background: #ffedd5; color: #c2410c; }
+.footer{
+    display: block;
+}
